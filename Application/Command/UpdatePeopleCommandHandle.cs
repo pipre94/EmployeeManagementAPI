@@ -24,11 +24,12 @@ namespace Application.Command
                 PeopleModel peopleModel = new();
                 peopleModel.Id = request.Id;
                 peopleModel.IdNumber = request.IdNumber;
-                peopleModel.Name = request.Name;
+                peopleModel.Name = request.Name; 
                 peopleModel.AdmissionDate = request.AdmissionDate;
                 peopleModel.Photo = request.Photo;
                 peopleModel.PositionId = request.PositionId;
                 await _peopleRepository.UpdatePeopleById(peopleModel);
+
                 return peopleModel;
 
             }
